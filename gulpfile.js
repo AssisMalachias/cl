@@ -17,11 +17,9 @@ function images() {
 }
 
 
-function watch(){
-    gulp.watch('./src/css/*.scss',style);
-}
-exports.default = gulp.series(
-    gulp.parallel(style, images),
-    watch
-);
+exports.default = gulp.parallel(style, images);
 
+exports.watch = function() {
+    gulp.watch('./src/css/*.scss',gulp.parallel(style))
+    gulp.watch('./src/image/**/*',gulp.parallel(style))
+}

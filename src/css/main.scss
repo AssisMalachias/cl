@@ -1,0 +1,68 @@
+@use 'variable'as v;
+@use '_hero';
+
+@font-face {
+    font-family:OpenSans;
+    src:url(../../assets/Open_Sans/OpenSans-Regular.ttf);
+    font-weight:400;
+}
+@font-face {
+    font-family:OpenSans;
+    src:url(../../assets/Open_Sans/OpenSans-bold.ttf);
+    font-weight:700;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,body{
+    height:100%;
+    background-color:v.$corPrimeiraFundo;
+    font-family: OpenSans, sans-serif;
+}
+@mixin text($fontSize:18px){
+    font-size:$fontSize;
+    line-height:1.4;
+    letter-spacing:0;
+    color:v.$corPrimeiroFonte;
+}
+.text--big {
+    @include text(40px)
+}
+.text--media {
+    @include text(24px);
+    color:v.$corPrimeiroFonte;
+}
+
+.text--other {
+    @include text(16px);
+}
+
+.text--small {
+    @include text(12px);
+    
+}
+
+@mixin titulo($fontSize:18px){
+    font-size:$fontSize;
+    line-height:1.4;
+    letter-spacing:0;
+    color:v.$corPrimeiroFonte;
+}
+.titulo--big {
+    @include text(40px)
+}
+.titulo--media {
+    @include text(28px);
+}
+
+.titulo--other {
+    @include text(17px);
+}
+
+.titulo--small {
+    @include text(16px);
+}
+
+
