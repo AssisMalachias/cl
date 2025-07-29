@@ -8,6 +8,10 @@ function style() {
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(gulp.dest('./dist/css'));
 }
+function script() {
+    return gulp.src('./src/js/*.js')
+    .pipe(gulp.dest('./dist/js'));
+}
 
 function images() {
     return gulp.src('./src/image/**/*.+(png|jpg|jpeg|gif|svg)')
@@ -17,9 +21,10 @@ function images() {
 }
 
 
-exports.default = gulp.parallel(style, images);
+exports.default = gulp.parallel(style, images,script);
 
 exports.watch = function() {
     gulp.watch('./src/css/*.scss',gulp.parallel(style))
+     gulp.watch('./src/js/*.js',gulp.parallel(script))
     gulp.watch('./src/image/**/*',gulp.parallel(style))
 }

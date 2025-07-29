@@ -1,0 +1,46 @@
+@use 'variable'as v;
+
+.shows {
+     padding:2vw 5.6vw;
+
+    &__list {
+        display:none;
+        grid-template-columns: repeat(3,1fr);
+        gap:14px;
+        list-style-type:none;
+        text-align: center;
+
+        &--is-active {
+            display:grid;
+        }
+
+        &--item {
+            img {
+                max-width: 100%;
+                border-radius:4px;
+            }
+        }
+    }
+
+    &__tabs{
+           display:flex;
+           justify-content: center;
+            margin-bottom:24px;
+
+        &--button {
+            color:v.$corPrimeiroFonte;
+            background-color:v.$corPrimeiraFundo;
+            font-size:20px;
+            text-transform: uppercase;
+            border:none;
+            margin:0 1vw;
+            cursor: pointer;
+            padding-bottom:2px;
+
+
+            &--is-active {
+                 border-bottom:3px solid v.$corPrimeiroFonte;
+            }
+        }
+    }
+}

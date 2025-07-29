@@ -1,16 +1,19 @@
 @use 'variable'as v;
 @use '_hero';
+@use '_shows';
+@use '_plans';
 
 @font-face {
     font-family:OpenSans;
-    src:url(../../assets/Open_Sans/OpenSans-Regular.ttf);
+    src:url(../../assets/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
     font-weight:400;
 }
 @font-face {
     font-family:OpenSans;
-    src:url(../../assets/Open_Sans/OpenSans-bold.ttf);
+    src:url(../../assets/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
     font-weight:700;
 }
+
 *{
     margin:0;
     padding:0;
@@ -65,4 +68,16 @@ html,body{
     @include text(16px);
 }
 
+button {
+ 
+                    display:block;
+                    width:100%;
+                    height:60px;
+                    font-size:18px;
+                    background-color:v.$corSegundoBtn;
+                    color:v.$corPrimeiroFonte;
+                    border:none;
+                    margin:10px 20px;
+                    cursor: pointer;   
+}
 
