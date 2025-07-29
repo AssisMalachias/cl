@@ -1,0 +1,33 @@
+@use 'variable'as v;
+.available-devices{
+    padding:5.6vw;
+     
+
+    h2 {
+        text-align: center;
+        margin-bottom:24px;
+    }
+
+    &__list {
+        display:grid;
+        grid-template-columns:repeat(4, 1fr);
+       
+        &__item {
+            text-align: center;
+            list-style-type:none;
+
+            h4 {
+                margin-bottom:5px;
+            }
+
+            ul{
+                list-style-type:none;
+                color:v.$corParragraFonte;
+            }
+
+            img {
+                max-width:100%;
+            }
+        }
+    }
+}
