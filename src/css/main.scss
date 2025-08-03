@@ -5,6 +5,7 @@
 @use 'available-devices';
 @use '_faq';
 @use '_footer';
+@use 'header';
 
 
 @font-face {
@@ -22,6 +23,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    list-style:none;
 }
 html,body{
     height:100%;
@@ -72,7 +74,7 @@ html,body{
     @include text(16px);
 }
 
-button {
+.button {
  
                     display:block;
                     width:100%;
@@ -82,7 +84,30 @@ button {
                     color:v.$corPrimeiroFonte;
                     border:none;
                     margin:10px 20px;
-                    cursor: pointer;   
+                    cursor: pointer;  
+                    padding:18px 10px;
+                    text-decoration:none; 
+                    letter-spacing: 1px;
+                    border-radius:3px;
+                    border:1px solid v.$corSegundoBtn;
+
+
+  &--secondary {
+
+    &:hover {
+         background-color:lighten(v.$corSegundoBtn, 3%);
+    }
+  }
+
+  &--dark {
+    background-color: rgba(v.$corPrimeiroBtn, 0.5);
+     border:2px solid v.$corBordaBtn;
+
+     &:hover {
+        background-color: v.$corPrimeiraFundo;
+        color:v.$corParragraFonte;
+     }
+  }
 }
 
 .image-text-section{

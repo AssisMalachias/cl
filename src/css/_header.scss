@@ -1,0 +1,47 @@
+@use 'variable'as v;
+
+.header {
+    position:sticky;
+    top:0;
+    left:0;
+    background-color:v.$corPrimeiraFundo;
+     transition: background-color 0.5s ease;
+
+ &--is--hidden {
+      background-color:transparent;
+      transition: background-color 0.5s ease;
+      transition: opacity 0.5s ease;
+
+    .header {
+         &__logo, &__links__item:first-child {
+          opacity:0;
+          visibility: hidden;
+       }
+    }
+ 
+ }
+ &__container{
+     padding:8px 36px;
+     display:flex;
+     justify-content:space-between;
+ }
+
+ &__logo{
+    max-width: 80px;
+    width:100%;
+    transition: opacity 0.5s ease;
+ }
+
+ &__link{
+    display:flex;
+    list-style-type:none;
+
+   .header__links__item{
+         margin:5px;
+         text-transform: uppercase;
+         text-align: center;
+          transition: opacity 0.5s ease;
+    }
+ }
+}
+
