@@ -91,8 +91,19 @@ html,body{
                     border-radius:3px;
                     border:1px solid v.$corSegundoBtn;
 
+                     @media (max-width:768px){
+                       
+                               width:70%;
+                                padding:8px 5px;
+                                margin:2px 15px;
+                                justify-content: center;
+                                justify-items: center;
+                        
 
+                     }
   &--secondary {
+
+   
 
     &:hover {
          background-color:lighten(v.$corSegundoBtn, 3%);
@@ -100,7 +111,7 @@ html,body{
   }
 
   &--dark {
-    background-color: rgba(v.$corPrimeiroBtn, 0.5);
+    background-color: rgba(v.$corPrimeiroBtn, 0.5%);
      border:2px solid v.$corBordaBtn;
 
      &:hover {
@@ -115,6 +126,10 @@ html,body{
     display:grid;
     grid-template-columns:repeat(2, 1fr);
     align-items: center;
+
+    @media (max-width: 768px){
+        display: block;
+    }
 
     img {
         max-width:100%;
@@ -143,6 +158,14 @@ html,body{
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+             @media (max-width:768px){
+                position: relative;
+                left:0;
+                width:100%;
+                justify-content: center;
+                font-size:18px;
+            }
          }
     }
 }
